@@ -47,7 +47,6 @@ export default {
     letter-spacing:-0.7px;
     border-radius:15px;
     overflow:hidden;
-    background:#fff;
 
     .dialog-head{
         display:flex;
@@ -88,7 +87,7 @@ export default {
 
         .v-btn{
             font-size:30px;
-            height:90px;
+            height:100px;
             width:150px;
             font-family:'NotoSansKR';
             border-radius:0px;

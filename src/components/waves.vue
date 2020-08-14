@@ -24,8 +24,8 @@
   width: 100%;
   height:50%;
   margin-bottom:0px; /*Fix for safari gap*/
-  min-height:600px;
-  max-height:800px;
+  min-height:800px;
+  max-height:1000px;
   z-index:1;
 }
 
