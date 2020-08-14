@@ -1,5 +1,6 @@
 <template>
     <div class="default">
+        <Message/>
         <div class="contents">
             <dl class="loginTitle">
                 <dt>관리자로그인</dt>
@@ -61,6 +62,16 @@
         </div>
     </div>
 </template>
+
+<script>
+import Message from '@/components/message.vue';
+
+export default {
+    components:{
+        Message,
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 
