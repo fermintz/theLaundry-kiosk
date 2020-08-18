@@ -1,6 +1,7 @@
 <template>
   <div class="default">
     <PasswordPad ref="password" />
+    <Loading/>
 
     <!-- top -->
       <SubLayout 
@@ -44,11 +45,13 @@
 <script>
 import PasswordPad from '@/components/password-pad.vue';
 import SubLayout from '@/components/SubLayout.vue';
+import Loading from '@/components/loading.vue';
 
 export default {
   components: {
     PasswordPad,
     SubLayout,
+    Loading,
   },
   data() {
     return {

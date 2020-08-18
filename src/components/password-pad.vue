@@ -14,10 +14,13 @@
           </div>
           <v-btn icon><v-icon>mdi-close</v-icon></v-btn>
           <div class="numberView">
-            <div class="number">1</div>
+            <div class="number active">1</div>
+            <div class="number">2</div>
             <div class="number"></div>
             <div class="number"></div>
-            <div class="number"></div>
+          </div>
+          <div class="tip">
+            비밀번호를 입력해주세요
           </div>
         </div>
         <div class="numberPad">
@@ -45,7 +48,7 @@
 export default {
   data() {
     return {
-			visible: true,
+			visible: false,
 			numberPad: [
 				[1,2,3],
 				[4,5,6],
@@ -109,7 +112,7 @@ export default {
 
         .number{
           margin:0 15px;
-          width:60px;height:60px;
+          width:45px;height:45px;
           border-radius:30px;
           background:#fff;
           display:flex;
@@ -117,8 +120,19 @@ export default {
           align-items: center;
           font-size:27px;
           font-weight:500;
-          font-family:'NotoSansKR'
+          font-family:'NotoSansKR';
+          color:#292929
         }
+        .number.active{
+          background:#292929;
+        }
+      }
+
+      .tip{
+        color:#fff;
+        font-size:30px;
+        text-align:center;
+        font-family:'NotoSansKR'
       }
     }
 

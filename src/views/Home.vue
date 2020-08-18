@@ -1,8 +1,20 @@
 <template>
   <div class="default">
-    <div class="banner">
-      <img src="@/assets/img/home-bg.png">
-    </div>
+    <v-carousel
+    height="1920"
+    hide-delimiters
+    show-arrows-on-hover="flase"
+    >
+      <v-carousel-item>
+        <img src="http://admin.payot-coin.com/kiosk/sb01.png">
+      </v-carousel-item>
+      <v-carousel-item>
+        <img src="http://admin.payot-coin.com/kiosk/sb02.png">
+      </v-carousel-item>
+    </v-carousel>
+
+    <div class="gradient" />
+
     <div class="btns">
       <v-btn text @click="$router.push('/Main')">
         <v-icon>mdi-gesture-tap</v-icon>
@@ -30,11 +42,19 @@ export default {
 
 <style lang="scss" scoped>
 
-.banner{
-  img{width:100%;height:1848px}
-  overflow:hidden
+.default{
+  background:#fff;
 }
 
+.gradient{
+  position:fixed;
+  z-index:2;
+  bottom:0;
+  width:100%;
+  height:800px;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 100%);
+}
 
 .btns{
   position:absolute;
@@ -67,7 +87,7 @@ export default {
   text-align:center;
   z-index: 3;
   position:absolute;
-  bottom:50px;
+  bottom:60px;
   img{
     height:50px;
   }

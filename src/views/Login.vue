@@ -11,15 +11,17 @@
                 <dl class="item">
                     <dt>아이디</dt>
                     <dd>
-                        <input type="text"/>
+                        <input type="text" @click="show = true"/>
                     </dd>
                 </dl>
-                <dl class="item">
-                    <dt>비밀번호</dt>
-                    <dd>
-                        <input type="password"/>
-                    </dd>
-                </dl>
+                <transition>
+                    <dl class="item" v-if="show">
+                        <dt>비밀번호</dt>
+                        <dd>
+                            <input type="password"/>
+                        </dd>
+                    </dl>
+                </transition>
                 <dl class="item leftText">
                     <dt>현금적립률</dt>
                     <dd>
@@ -69,7 +71,13 @@ import Message from '@/components/message.vue';
 export default {
     components:{
         Message,
+    },
+    data(){
+        return{
+            show:false
+        }
     }
+    
 }
 </script>
 
@@ -187,6 +195,16 @@ export default {
             li:last-child{margin-bottom:0px;}
         }
     }
+}
+
+
+.v-enter-active{
+    transition: all 1s ease
+}
+
+.v-enter /* .fade-leave-active below version 2.1.8 */ {
+    transform: translateX(30px);
+  opacity: 0;
 }
 
 
