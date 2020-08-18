@@ -4,6 +4,7 @@
     title2="선택하신 서비스와 결제금액을 확인해주세요"
     next="complete"
   >
+    <CreditModal />
     <div class="detailView">
       <dl>
         <dt>회원정보</dt>
@@ -54,10 +55,11 @@
 
 <script>
 import SubLayout from '@/components/SubLayout.vue';
+import CreditModal from '@/components/credit-modal.vue';
 
 export default {
   components: {
-    SubLayout,
+    SubLayout, CreditModal
   },
 };
 </script>
