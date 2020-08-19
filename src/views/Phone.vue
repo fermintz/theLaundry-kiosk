@@ -2,6 +2,7 @@
   <div class="default">
     <PasswordPad ref="password" />
     <Loading/>
+    <Agree ref="agree"/>
 
     <!-- top -->
       <SubLayout 
@@ -12,7 +13,7 @@
         <div class="phoneView">
         <div class="box numberView">
           <div class="text">
-            <span>이용약관</span>과 <span>개인정보취급방침</span>에 동의하시면 휴대전화번호를 입력 후 아래 다음버튼을
+            <span @click="$refs.agree.open(true)">이용약관</span>과 <span>개인정보취급방침</span>에 동의하시면 휴대전화번호를 입력 후 아래 다음버튼을
             터치해주세요
           </div>
           <div class="divider" />
@@ -46,12 +47,14 @@
 import PasswordPad from '@/components/password-pad.vue';
 import SubLayout from '@/components/SubLayout.vue';
 import Loading from '@/components/loading.vue';
+import Agree from '@/components/agree.vue';
 
 export default {
   components: {
     PasswordPad,
     SubLayout,
     Loading,
+    Agree,
   },
   data() {
     return {

@@ -2,14 +2,13 @@
 	display:flex;
 	flex-direction: column;
 	flex:1;
-	height:0px;
-
+	height:1920px;
+	overflow:hidden;
 }
 
 .default {
 	display:flex;
 	flex-direction: column;
-	height:0px;
 	flex:1;
   	background: #00a0e9;
 	font-family:'NotoSansKR';
@@ -17,7 +16,7 @@
 	line-height:auto;
 	letter-spacing:-0.7px;
 	font-weight:400;
-
+	overflow:hidden;
 
 	.contents{
 		display:flex;
