@@ -1,10 +1,8 @@
 <template>
-  <SubLayout
-    title="서비스확인 및 포인트사용"
-    title2="선택하신 서비스와 결제금액을 확인해주세요"
-    next="complete"
+  <DefaultLayout
+    @done="nextStep"
   >
-    <CreditModal />
+
     <div class="detailView">
       <dl>
         <dt>회원정보</dt>
@@ -49,17 +47,29 @@
           </div>
         </dd>
       </dl>
+
+      <div class="guideText">
+        <div class="text1">
+          <v-icon size="70">mdi-exclamation-thick</v-icon>
+          <span>키오스크에서 선택하신 <b>포인트</b>를 각 기기에서 이용하실 <b>금액</b>과 <b>일치</b>시켜야 합니다.</span>
+        </div>
+        <div class="text2">※ 초과 결제된 금액은 반환해드리지 않습니다.</div>
+      </div>
     </div>
-  </SubLayout>
+  </DefaultLayout>
 </template>
 
 <script>
-import SubLayout from '@/components/SubLayout.vue';
-import CreditModal from '@/components/credit-modal.vue';
+import DefaultLayout from '@/components/layout/default.vue';
 
 export default {
   components: {
-    SubLayout, CreditModal
+    DefaultLayout
+  },
+  methods:{
+    nextStep(){
+      this.$router.push('Finish')
+    }
   },
 };
 </script>
@@ -98,7 +108,50 @@ export default {
 				span{color:#d22828}
 			}
 		}
-	}
+  }
+  
+  .guideText{
+    text-align:center;
+    background:rgba(0,0,0,0.65);
+    border-radius:30px;
+    padding:30px;
+
+    .text1{
+      display:flex;
+      align-items: center;
+      margin-bottom:30px;
+
+      .v-icon{
+        width:100px;
+        color:yellow;
+        margin-right:10px;
+      }
+      span{
+        flex:1;
+        color:#fff;
+        text-align:left;
+        display:block;
+        word-break: keep-all;
+
+        b{
+          color:yellow;
+          font-weight:normal
+        }
+      }
+    }
+    
+    .text2{
+      display: inline-block;
+      height:80px;
+      line-height:80px;
+      padding:0 45px;
+      border-radius:45px;
+      text-align:center;
+      background:#d22828;
+      color:#fff;
+      font-size:32px;
+    }
+  }
 }
 
 .divider{
@@ -106,5 +159,6 @@ export default {
 	background:#e2e2e2;
 	margin:30px 0;
 }
+
 
 </style>

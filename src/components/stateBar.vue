@@ -1,10 +1,10 @@
 <template> 
 	<div class="stateBar">
 		<div class="shop">
-			<div class="shopName" @click="$router.push('Main')">
+			<div class="shopName" @click="$router.push('modalTest')">
 				페이오티 금정구점
 			</div>
-			<div class="shopNumber">
+			<div class="shopNumber" @click="$router.push('/')">
 				010-8525-4561
 			</div>
 		</div>
@@ -15,17 +15,18 @@
 </template>
 
 <style lang="scss" scoped>
+
 .stateBar{
 	display:flex;
-	background:#292929;
-	height:72px;
-	color:#fff;
+	min-height:70px;
 	font-size:24px;
 	font-family:'NotoSansKR';
 	letter-spacing:-0.7px;
 	justify-content:space-between;
 	align-items: center;
 	padding:0 30px;
+	color:#fff;
+	background:#292929;
 
 	.shop{
 		display:flex;

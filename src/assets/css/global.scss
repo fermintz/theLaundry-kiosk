@@ -1,84 +1,66 @@
-.wrap{
-	display:flex;
-	flex-direction: column;
-	flex:1;
-	height:1920px;
-	overflow:hidden;
-}
+$baseColor:#00a0e8; //대표컬러
+$baseColorDeep:#0084b2; //대표컬러,진하게
 
-.default {
+.wrap{
+	height:1920px;
 	display:flex;
 	flex-direction: column;
-	flex:1;
-  	background: #00a0e9;
-	font-family:'NotoSansKR';
+  background: $baseColor;
 	font-size:36px;
-	line-height:auto;
-	letter-spacing:-0.7px;
+	font-family:'NotoSansKR';
 	font-weight:400;
 	overflow:hidden;
 
 	.contents{
-		display:flex;
 		flex:1;
-		flex-direction: column;
-		padding:0 50px;
-		padding-top:0px;
-		z-index:3;
-		height:0px;
 	}
+}
 
-	.box{
-		background:#fff;
-		border-radius:15px;
-		padding:50px;
-		box-shadow: 0 0 30px rgba(0,0,0,0.15);
-	}
+// 메인페이지
 
-	.footerBtns{
-		display:flex;
-		flex-direction: row;
-		padding:50px;
-		border-radius:15px;
-		overflow:hidden;
-		z-index:3;
-		
-
-		.v-btn{
-			height:120px;
-			flex:1;
-			border-radius:0px;
-		}
-
-		.back.v-btn{
-			max-width:120px;
-			height:120px;
-			background:#0088c6;
-			border-radius:15px 0 0 15px;
-
-			.v-icon{
-				font-size:48px;
-				color:#fff;
+.home{
+	.btns{
+		.login{
+			label{
+				color:$baseColor;
 			}
 		}
-		.next.v-btn{
-			background:#00a0e9;
-			color:#fff;
-			border-radius:0 15px 15px 0;
+	}
+}
+
+// 메인웨이브
+
+.waves{
+	.wave1{
+		background:$baseColor;
+	}
+	.wave2{
+		background:$baseColor;
+	}
+	.wave3{
+		background:$baseColor;
+	}
+}
+
+// 서브페이지 제목
+
+.titleHead{
+	.homeBtn{
+		.v-icon{
+			color:$baseColor
 		}
 	}
+}
 
-	.v-btn{
-		font-size:36px;
-		letter-spacing: -0.7px;
-		font-family:'NotoSansKR';
-		font-weight:500;
+// 유저로그인 (휴대폰번호 입력)
+
+.userLogin{
+	.numberView{
+		span{
+			color:$baseColor
+		}
 	}
 }
 
-.v-dialog{
-	border-radius:15px;
-	overflow:hidden;
-}
 
 

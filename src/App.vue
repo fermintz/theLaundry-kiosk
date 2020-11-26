@@ -1,17 +1,22 @@
 <template>
   <v-app>
-    <BaseLayout />
+    <div class="wrap">
+      <StateBar />
+      <div class="contents">
+        <router-view />
+      </div>
+    </div>
   </v-app>
 </template>
 
 <script>
-import BaseLayout from '@/components/BaseLayout.vue';
+import StateBar from '@/components/stateBar.vue';
 
 export default {
   name: 'App',
 
   components: {
-    BaseLayout
+    StateBar,
   },
 
   data: () => ({
@@ -19,3 +24,5 @@ export default {
   }),
 };
 </script>
+
+<style lang="sass" scoped></style>

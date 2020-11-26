@@ -20,17 +20,16 @@
 
 
 <script>
+import BaseModal from '@/mixins/modal.vue';
+
 export default {
-    data(){
-        return{
-            visible:true,
-        }
-    },
-    methods:{
-        open(value){
-            this.visible = value 
-        }
-    }
+	mixins:[BaseModal],
+	data(){
+		return{}
+	},
+	methods:{
+
+	},
 }
 </script>
 

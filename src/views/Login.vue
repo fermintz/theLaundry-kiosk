@@ -1,6 +1,5 @@
 <template>
-    <div class="default">
-        <Message/>
+    <div class="login">
         <div class="contents">
             <dl class="loginTitle">
                 <dt>관리자로그인</dt>
@@ -11,17 +10,17 @@
                 <dl class="item">
                     <dt>아이디</dt>
                     <dd>
-                        <input type="text" @click="show = true"/>
+                        <input type="text" />
                     </dd>
                 </dl>
-                <transition>
-                    <dl class="item" v-if="show">
-                        <dt>비밀번호</dt>
-                        <dd>
-                            <input type="password"/>
-                        </dd>
-                    </dl>
-                </transition>
+              
+                <dl class="item" v-if="show">
+                    <dt>비밀번호</dt>
+                    <dd>
+                        <input type="password"/>
+                    </dd>
+                </dl>
+     
                 <dl class="item leftText">
                     <dt>현금적립률</dt>
                     <dd>
@@ -66,23 +65,15 @@
 </template>
 
 <script>
-import Message from '@/components/message.vue';
-
 export default {
-    components:{
-        Message,
-    },
-    data(){
-        return{
-            show:false
-        }
-    }
     
 }
 </script>
 
 <style lang="scss" scoped>
-
+.login{
+    padding:0 60px;
+    
 .loginTitle{
     text-align:center;
     padding:100px 0;
@@ -208,5 +199,5 @@ export default {
 }
 
 
-
+}
 </style>

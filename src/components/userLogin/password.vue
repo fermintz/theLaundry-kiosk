@@ -2,8 +2,8 @@
   <v-dialog 
     v-model="visible"
     width="560"
-    origin="bottom"
     overlay-opacity="0.8"
+    transition="slide-x-transition"
   >
     <div class="dialog"
     >
@@ -57,7 +57,7 @@ export default {
     };
   },
   methods: {
-    dialog(value) {
+    open(value) {
       this.visible = value;
 		},
 		inputNumber(char) {
@@ -69,7 +69,6 @@ export default {
 
 <style lang="scss" scoped>
 .dialog {
-  
   .password-pad {
     width:560px;
     position:absolute;
@@ -78,10 +77,13 @@ export default {
     border-radius:15px;
     overflow:hidden;
     
+    // 기본 비밀번호 입력 #00a0e9
+    // 비밀번호 등록 #431cb3
+    // 비밀번호 확인 #1f9103
 
     .pad-header{
       position:relative;
-      background:#00a0e9;
+      background:#00a0e9; 
       padding:30px;
 
       .pad-title{
@@ -149,8 +151,12 @@ export default {
         .v-btn{
           width:100%;
           height:72px;
-          background:#f2f2f2;
           border-radius:15px;
+          border:2px solid #d2d2d2;
+          background: rgb(194,194,194);
+          background: linear-gradient(0deg, rgba(194,194,194,0.8) 0%, rgba(255,255,255,1) 100%);
+
+
           .v-icon{font-size:36px;}
           span{
             font-size:27px;
@@ -161,7 +167,6 @@ export default {
         }
       }
       
-
       .row {
         display: flex;
         flex: 1;
@@ -173,8 +178,10 @@ export default {
           font-size: 42px;
           background: #fff;
           margin: 0 6px;
-          border: 3px solid #e2e2e2;
+          border: 2px solid #d2d2d2;
           border-radius: 15px;
+          background: rgb(194,194,194);
+          background: linear-gradient(0deg, rgba(194,194,194,0.8) 0%, rgba(255,255,255,1) 100%);
         }
         .v-icon {
           font-size: 48px;
