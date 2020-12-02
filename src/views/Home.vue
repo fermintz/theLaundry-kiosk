@@ -5,12 +5,11 @@
       hide-delimiters
       :show-arrows-on-hover="false"
       :show-arrows="false"
+      :cycle="true"
+      interval="5000"
     >
-      <v-carousel-item>
-        <img src="http://admin.payot-coin.com/kiosk/sb01.png">
-      </v-carousel-item>
-      <v-carousel-item>
-        <img src="http://admin.payot-coin.com/kiosk/sb02.png">
+      <v-carousel-item v-for="item in slides" :key="item">
+        <img :src="item.url">
       </v-carousel-item>
     </v-carousel>
 
@@ -52,7 +51,16 @@ export default {
   },
   data() {
     return { 
-      visible: true
+      visible: true,
+      slides:[
+        {url:'./image/main-sb-01.png'},
+        {url:'./image/main-sb-02.png'},
+        {url:'./image/main-sb-03.png'},
+        {url:'./image/main-sb-04.png'},
+        {url:'./image/main-sb-05.png'},
+        {url:'./image/main-sb-06.png'},
+        {url:'./image/main-sb-07.png'}
+      ],
     }
   }
 };
